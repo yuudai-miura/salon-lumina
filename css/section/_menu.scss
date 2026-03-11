@@ -1,0 +1,73 @@
+.menu {
+    &__nav {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+    }
+
+    &__btn {
+        height: 40px;
+        padding-inline: 14px;
+        border: 1px solid $c-border;
+        border-radius: $radius-md;
+        font-size: $font-size-sm;
+        background: $c-bg;
+        cursor: pointer;
+
+        &.is-active {
+            border-color: transparent;
+            background: rgba(201, 166, 107, .18);
+        }
+    }
+
+    &__panel {
+        animation: fade .2s ease;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0;
+            transform: translateY(4px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__item {
+        padding: 24px;
+        border-radius: $radius-sm;
+        box-shadow: $shadow-sm;
+    }
+
+    &__title {
+        font-size: $font-size-base18;
+        margin-bottom: 8px;
+    }
+
+    &__price {
+        font-size: $font-size-md;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+
+    &__meta {
+        font-size: 12px;
+        margin-bottom: 8px;
+        color: $c-sub;
+    }
+
+    &__text {
+        font-size: $font-size-sm;
+        color: $c-sub;
+    }
+
+    &__link {
+        color: $c-accent;
+        font-weight: 500;
+    }
+
+}

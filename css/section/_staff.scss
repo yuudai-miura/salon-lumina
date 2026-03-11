@@ -1,0 +1,54 @@
+.staff {
+
+    &__item {
+        padding: 18px;
+        border: 1px solid $c-border;
+        border-radius: 12px;
+        text-align: center;
+        background: #fff;
+        box-shadow: $shadow-sm;
+        transition: .25s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+
+    &__img {
+        width: 120px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 12px;
+    }
+
+    &__name {
+        font-weight: 700;
+    }
+
+    &__position {
+        font-size: 12px;
+        margin: 4px 0 6px;
+        color: $c-sub;
+    }
+
+    &__skill {
+        font-size: $font-size-sm;
+        margin-bottom: 12px;
+        color: $c-sub;
+    }
+
+    &__link__btn {
+        width: 100%;
+        height: 40px;
+        border: 1px solid $c-border;
+        border-radius: 12px;
+        background: $c-bg;
+        cursor: pointer;
+        transition: .25s;
+
+        &:hover {
+            filter: brightness(0.95);
+        }
+    }
+}

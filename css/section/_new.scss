@@ -1,0 +1,30 @@
+.news {
+
+    &__item {
+        padding-block: 16px;
+        border-bottom: 1px solid $c-border;
+        display: grid;
+        grid-template-columns: 140px 1fr auto;
+        align-items: center;
+        gap: 16px;
+
+        @include viewport-375 {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__date {
+        color: $c-sub;
+        font-weight: 400;
+    }
+
+    &__badge {
+        max-width: 80px;
+        padding: 2px 10px;
+        border-radius: 999px;
+        background: $c-accent;
+        font-weight: 400;
+        text-align: center;
+
+    }
+}

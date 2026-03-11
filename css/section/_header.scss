@@ -1,0 +1,108 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, .88);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(34, 34, 34, .08);
+    transition: box-shadow .25s ease, background-color .25s ease, border-color .25s ease;
+
+    &.is-scrolled {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .10);
+        background: rgba(255, 255, 255, .95);
+    }
+
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+
+        line-height: 1;
+        text-decoration: none;
+
+        & span:first-child {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        & span:last-child {
+            font-size: $font-size-sm;
+            color: $c-sub;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+
+        @include viewport-768 {
+            position: fixed;
+            inset: 80px 0 auto 0;
+            background: #fff;
+            border-bottom: 1px solid rgba(34, 34, 34, .08);
+            padding: 18px 24px 24px;
+            opacity: 0;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 14px;
+            visibility: hidden;
+            pointer-events: none;
+            transition: transform .25s ease, opacity .25s ease, visibility .25s ease;
+            transform: translateY(-100%);
+        }
+
+        &__list {
+            display: flex;
+            gap: clamp(16px, 4vw, 32px);
+            list-style: none;
+
+            @include viewport-768 {
+                flex-direction: column;
+            }
+        }
+
+        &__link {
+            text-decoration: none;
+
+            &:hover {
+                color: $c-sub;
+            }
+        }
+
+        &__cta {
+            display: none;
+
+            @include viewport-768 {
+                display: flex;
+            }
+        }
+    }
+
+    &__reserve {
+        @include viewport-768 {
+            display: none;
+        }
+    }
+
+    &.open .header__nav {
+        visibility: visible;
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+
+}

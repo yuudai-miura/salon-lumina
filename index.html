@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALON LUMINA | 美容院</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" type="module" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner l-container">
+            <a href="#top" class="header__logo logo" aria-label="SALON LUMINA トップへ">
+                <span>SALON</span>
+                <span>LUMINA</span>
+            </a>
+
+            <button class="hamburger__button" aria-controls="globalNav" aria-expanded="false" aria-label="メニューを開く">
+                <span class="hamburger__button__line" aria-hidden="true"></span>
+                <span class="hamburger__button__line" aria-hidden="true"></span>
+                <span class="hamburger__button__line" aria-hidden="true"></span>
+            </button>
+
+            <nav class="header__nav">
+                <ul class="header__nav__list">
+                    <li class="header__nav__item"><a href="#concept" class="header__nav__link">Concept</a>
+                    </li>
+                    <li class="header__nav__item"><a href="#menu" class="header__nav__link">Menu</a></li>
+                    <li class="header__nav__item"><a href="#staff" class="header__nav__link">Staff</a></li>
+                    <li class="header__nav__item"><a href="#news" class="header__nav__link">News</a></li>
+                    <li class="header__nav__item"><a href="#faq" class="header__nav__link">FAQ</a></li>
+                    <li class="header__nav__item"><a href="#access" class="header__nav__link">Access</a></li>
+                </ul>
+                <a href="#" class="btn btn-primary header__nav__cta">予約する</a>
+            </nav>
+            <a href="#" class="btn btn-primary header__reserve">予約する</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="メインビジュアル" id="top">
+            <div class="hero__media" aria-hidden="true">
+                <img class="hero__img" src="img/mv.jpg" alt="">
+            </div>
+            <div class="hero__inner l-container">
+                <div class="hero__content">
+                    <p class="hero__eyebrow">TOKYO / HAIR SALON</p>
+                    <h1 class="hero__title">あなたの魅力を、<br>最大限に。</h1>
+                    <p class="hero__lead">骨格・髪質・ライフスタイルに合わせて、<br>“似合う” を丁寧にデザインします。</p>
+                </div>
+                <div class="hero__cta">
+                    <a href="" class="btn btn-primary">予約する</a>
+                    <a href="" class="btn btn-ghost">料金を見る</a>
+                </div>
+                <ul class="hero__meta">
+                    <li class="hero__meta__item"><span>営業時間</span> 10:00–20:00</li>
+                    <li class="hero__meta__item"><span>定休日</span> 火曜</li>
+                    <li class="hero__meta__item"><span>TEL</span> <a href="tel:0312345678">03-1234-5678</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section section--bg" id="concept">
+            <div class="section__inner l-container">
+                <header class="section__header">
+                    <p class="section__label label">Concept</p>
+                    <h2 class="section__title">「らしさ」を引き出す、<br>上質な時間。</h2>
+                    <p class="section__desc">カウンセリングから仕上げまで、丁寧に。毎日が少し楽しくなるヘアを提案します。</p>
+                </header>
+                <div class="concept">
+                    <div class="concept__text">
+                        <ul class="concept__list">
+                            <li class="concept__item">
+                                <h3 class="concept__title">丁寧なカウンセリング</h3>
+                                <p class="concept__desc">髪質・骨格・お悩みを共有し、似合うデザインを一緒に決めます。</p>
+                            </li>
+                            <li class="concept__item">
+                                <h3 class="concept__title">再現性の高いカット</h3>
+                                <p class="concept__desc">ご自宅で扱いやすい、乾かすだけでまとまる設計を意識します。</p>
+                            </li>
+                            <li class="concept__item">
+                                <h3 class="concept__title">髪をいたわる施術</h3>
+                                <p class="concept__desc">ダメージを抑えた薬剤選定と、ケアメニューで質感を整えます。</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="concept__media">
+                        <img src="img/concept.jpg" alt="" class="concept__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--muted" id="menu">
+            <div class="section__inner l-container">
+                <header class="section__header">
+                    <p class="section__label label">Menu</p>
+                    <h2 class="section__title">料金メニュー</h2>
+                    <p class="section__desc">表示価格は税込です。カットはシャンプー・ブロー込。</p>
+                </header>
+                <div class="menu" data-menu>
+                    <div class="menu__nav">
+                        <button class="menu__btn is-active" type="button" role="tab" aria-selected="true"
+                            aria-controls="panel-cut" id="nav-cut">CUT</button>
+                        <button class="menu__btn" type="button" role="tab" aria-selected="false"
+                            aria-controls="panel-color" id="nav-color">COLOR</button>
+                        <button class="menu__btn" type="button" role="tab" aria-selected="false"
+                            aria-controls="panel-perm" id="nav-perm">PERM</button>
+                        <button class="menu__btn" type="button" role="tab" aria-selected="false"
+                            aria-controls="panel-care" id="nav-care">CARE</button>
+                    </div>
+
+                    <div class="menu__panels">
+                        <div class="menu__panel is-active" id="panel-cut" role="tabpanel" aria-labelledby="nav-cut">
+                            <div class="menu__group">
+                                <div class="menu__list card cards--3">
+                                    <article class="menu__item">
+                                        <h3 class="menu__title">カット</h3>
+                                        <p class="menu__price">¥5,500</p>
+                                        <p class="menu__meta">60分</p>
+                                        <p class="menu__text">骨格と髪質に合わせたベーシックカット。</p>
+                                    </article>
+                                    <article class="menu__item">
+                                        <h3 class="menu__title">前髪カット</h3>
+                                        <p class="menu__price">¥1,100</p>
+                                        <p class="menu__meta">15分</p>
+                                        <p class="menu__text">気になる前髪だけメンテナンス。</p>
+                                    </article>
+                                    <article class="menu__item">
+                                        <h3 class="menu__title">学生カット</h3>
+                                        <p class="menu__price">¥4,400</p>
+                                        <p class="menu__meta">60分</p>
+                                        <p class="menu__text">学生限定のカットメニュー。</p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu__panel" id="panel-color" role="tabpanel" aria-labelledby="nav-color" hidden>
+                            <div class="menu__group">
+                                <div class="menu__list card cards--3">
+                                    <article class="menu__item">
+                                        <h3 class="menu__title">ワンカラー</h3>
+                                        <p class="menu__price">¥7,700</p>
+                                        <p class="menu__meta">90分</p>
+                                        <p class="menu__text">透明感のある発色に。</p>
+                                    </article>
+                                    <article class="menu__item">
+                                        <h3 class="menu__title">イルミナカラー</h3>
+                                        <p class="menu__price">¥9,350</p>
+                                        <p class="menu__meta">90分</p>
+                                        <p class="menu__text">ツヤ感重視のカラー。</p>
+                                    </article>
+                                    <article class="menu__item">
+                                        <h3 class="menu__title">ハイライト</h3>
+                                        <p class="menu__price">¥11,000〜</p>
+                                        <p class="menu__meta">120分</p>
+                                        <p class="menu__text">立体感を出したい方に。</p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu__panel" id="panel-perm" role="tabpanel" aria-labelledby="nav-perm" hidden>
+                            <div class="menu__group">
+                                <div class="menu__list card cards--3">
+                                    <article class="menu__item">
+                                        <h3 class="menu__title">パーマ</h3>
+                                        <p class="menu__price">¥8,800</p>
+                                        <p class="menu__meta">120分</p>
+                                        <p class="menu__text">ナチュラルな動きをプラス。</p>
+                                    </article>
+                                    <article class="menu__item">
+                                        <h3 class="menu__title">デジタルパーマ</h3>
+                                        <p class="menu__price">¥12,100</p>
+                                        <p class="menu__meta">150分</p>
+                                        <p class="menu__text">持ちの良いカール感。</p>
+                                    </article>
+                                    <article class="menu__item">
+                                        <h3 class="menu__title">ポイントパーマ</h3>
+                                        <p class="menu__price">¥4,400〜</p>
+                                        <p class="menu__meta">45分</p>
+                                        <p class="menu__text">トップの立ち上げなどに。</p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu__panel" id="panel-care" role="tabpanel" aria-labelledby="nav-care" hidden>
+                            <div class="menu__group">
+                                <div class="menu__list card cards--3">
+                                    <article class="menu__item">
+                                        <h3 class="menu__title">トリートメント</h3>
+                                        <p class="menu__price">¥3,300〜</p>
+                                        <p class="menu__meta">30分</p>
+                                        <p class="menu__text">髪の質感を整えます。</p>
+                                    </article>
+                                    <article class="menu__item">
+                                        <h3 class="menu__title">ヘッドスパ</h3>
+                                        <p class="menu__price">¥4,400</p>
+                                        <p class="menu__meta">45分</p>
+                                        <p class="menu__text">頭皮環境を整えるケア。</p>
+                                    </article>
+                                    <article class="menu__item">
+                                        <h3 class="menu__title">炭酸クレンジング</h3>
+                                        <p class="menu__price">¥1,100</p>
+                                        <p class="menu__meta">10分</p>
+                                        <p class="menu__text">毛穴汚れをすっきり。</p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section__footer">
+                    <a class="menu__link" href="#reserve">メニューの相談をする →</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section section--bg" id="staff">
+            <div class="section__inner l-container">
+                <header class="section__header">
+                    <p class="section__label label">Staff</p>
+                    <h2 class="section__title">スタッフ</h2>
+                    <p class="section__desc">経験豊富なスタイリストが担当します。</p>
+                </header>
+
+                <div class="staff">
+                    <div class="staff__pannel">
+                        <div class="staff__list card cards--4">
+                            <article class="staff__item">
+                                <img src="img/staff/satou_raina_main.png" alt="佐藤 玲奈の写真" class="staff__img">
+                                <p class="staff__name">佐藤 玲奈</p>
+                                <p class="staff__position">Top Stylist</p>
+                                <p class="staff__skill">得意：ショート / 透明感カラー</p>
+                                <button class="staff__link__btn" type="button" data-modal-open data-name="佐藤 玲奈"
+                                    data-position="Top Stylist" data-skill="得意：ショート / 透明感カラー"
+                                    data-desc="骨格に合わせた似合わせショートと、透明感のあるカラー提案が得意です。毎日のスタイリングが楽になるよう、再現性を大切に施術します。"
+                                    data-img="img/staff/satou_raina.jpg">
+                                    プロフィール
+                                </button>
+                            </article>
+
+                            <article class="staff__item">
+                                <img src="img/staff/takahashi_yuu_main.png" alt="高橋 悠の写真" class="staff__img">
+                                <p class="staff__name">高橋 悠</p>
+                                <p class="staff__position">Stylist</p>
+                                <p class="staff__skill">得意：メンズ / パーマ</p>
+                                <button class="staff__link__btn" type="button" data-modal-open data-name="高橋 悠"
+                                    data-position="Stylist" data-skill="得意：メンズ / パーマ"
+                                    data-desc="メンズカットとパーマデザインが得意です。ライフスタイルに合わせて、扱いやすく清潔感のあるスタイルをご提案します。"
+                                    data-img="img/staff/takahashi_yuu.jpg">
+                                    プロフィール
+                                </button>
+                            </article>
+
+                            <article class="staff__item">
+                                <img src="img/staff/yamada_sakura_main.png" alt="山田 さくらの写真" class="staff__img">
+                                <p class="staff__name">山田 さくら</p>
+                                <p class="staff__position">Colorist</p>
+                                <p class="staff__skill">得意：ブリーチ / デザインカラー</p>
+                                <button class="staff__link__btn" type="button" data-modal-open data-name="山田 さくら"
+                                    data-position="Colorist" data-skill="得意：ブリーチ / デザインカラー"
+                                    data-desc="肌なじみの良いカラー設計と、デザインカラーが得意です。ダメージを抑えながら、理想の色味に近づけます。"
+                                    data-img="img/staff/yamada_sakura.jpg">
+                                    プロフィール
+                                </button>
+                            </article>
+
+                            <article class="staff__item">
+                                <img src="img/staff/itou_kai_main.png" alt="伊藤 海の写真" class="staff__img">
+                                <p class="staff__name">伊藤 海</p>
+                                <p class="staff__position">Assistant</p>
+                                <p class="staff__skill">得意：ヘッドスパ</p>
+                                <button class="staff__link__btn" type="button" data-modal-open data-name="伊藤 海"
+                                    data-position="Assistant" data-skill="得意：ヘッドスパ"
+                                    data-desc="頭皮状態に合わせたヘッドスパで、リラックスできる時間をご提供します。日々の疲れを癒したい方はぜひご相談ください。"
+                                    data-img="img/staff/itou_kai.jpg">
+                                    プロフィール
+                                </button>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--muted" id="news">
+            <div class="section__inner l-container">
+                <header class="section__header section--row">
+                    <div>
+                        <p class="section__label label">News</p>
+                        <h2 class="section__title">お知らせ</h2>
+                    </div>
+                    <a href="#" class="btn btn-ghost">一覧を見る</a>
+                </header>
+
+                <div class="news">
+                    <ul class="news__list">
+                        <li class="news__item">
+                            <time datetime="" class="news__date">2026.02.01</time>
+                            <a href="#" class="news__link">春のキャンペーンを開始しました</a>
+                            <span class="news__badge">new</span>
+                        </li>
+                        <li class="news__item">
+                            <time datetime="" class="news__date">2026.01.18</time>
+                            <a href="#" class="news__link">定休日変更のお知らせ</a>
+                        </li>
+                        <li class="news__item">
+                            <time datetime="" class="news__date">2026.01.05</time>
+                            <a href="#" class="news__link">新しいトリートメント導入</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--bg" id="faq">
+            <div class="section__inner l-container">
+                <header class="section__header">
+                    <p class="section__label label">FAQ</p>
+                    <h2 class="section__title">よくある質問</h2>
+                </header>
+
+                <div class="accordion" data-accordion>
+                    <details class="accordion__item">
+                        <summary class="accordion__summary">当日の予約はできますか？</summary>
+                        <div class="accordion__content">
+                            <p>空き状況によって可能です。お電話または予約フォームよりご確認ください。</p>
+                        </div>
+                    </details>
+                    <details class="accordion__item">
+                        <summary class="accordion__summary">クレジットカードは使えますか？</summary>
+                        <div class="accordion__content">
+                            <p>主要ブランドに対応しています。電子マネーもご利用いただけます。</p>
+                        </div>
+                    </details>
+                    <details class="accordion__item">
+                        <summary class="accordion__summary">施術時間の目安は？</summary>
+                        <div class="accordion__content">
+                            <p>カット60分、カラー90分が目安です。髪の長さにより前後します。</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--muted" id="access">
+            <div class="section__inner l-container">
+                <header class="section__header section--row">
+                    <div>
+                        <p class="section__label label">Access</p>
+                        <h2 class="section__title">店舗情報</h2>
+                    </div>
+                </header>
+
+                <div class="access">
+                    <div class="access__group">
+                        <dl class="access__list">
+                            <div class="access__item">
+                                <dt class="access__term">住所</dt>
+                                <dd class="access__desc">東京都○○区○○ 1-2-3</dd>
+                            </div>
+                            <div class="access__item">
+                                <dt class="access__term">営業時間</dt>
+                                <dd class="access__desc">10:00–20:00</dd>
+                            </div>
+                            <div class="access__item">
+                                <dt class="access__term">定休日</dt>
+                                <dd class="access__desc">火曜</dd>
+                            </div>
+                            <div class="access__item">
+                                <dt class="access__term">TEL</dt>
+                                <dd class="access__desc"><a href="tel:0312345678">03-1234-5678</a></dd>
+                            </div>
+                        </dl>
+
+                        <div class="access__link">
+                            <a class="btn btn-primary" href="#reserve">予約する</a>
+                            <a class="btn btn-ghost" href="https://maps.google.com" target="_blank"
+                                rel="noopener">Googleマップ</a>
+                        </div>
+                    </div>
+
+                    <div class="access__map">
+                        <iframe title="SALON LUMINA 地図"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.398405748607!2d139.71789051310532!3d35.69181237246927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cee401b46c3%3A0x962f9f8cc2e62d73!2z44CSMTYwLTAwMDUg5p2x5Lqs6YO95paw5a6_5Yy65oSb5L2P55S677yS77yS4oiS77yXIOesrOS4ieWxseeUsOODk-ODqw!5e0!3m2!1sja!2sjp!4v1760757421958!5m2!1sja!2sjp"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="reserve section--primary" id="reserve" aria-label="予約">
+            <div class="reserve__inner l-container">
+                <div class="reserver__content">
+                    <p class="reserve__label label">Reserve</p>
+                    <h2 class="reserve__title">ご予約はこちら</h2>
+                    <p class="reserve__text">ご希望の日時・メニューをお知らせください。</p>
+                </div>
+
+                <div class="reserve__action">
+                    <a href="#" class="btn btn-invert">予約フォームへ</a>
+                    <a href="tel:0312345678" class="btn btn-invert-ghost">電話する</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner l-container">
+            <div class="footer__nav">
+                <a href="#top" class="footer__logo logo">SALON LUMINA</a>
+
+                <ul class="footer__nav__list">
+                    <li class="footer__nav__item"><a href="#concept" class="footer__nav__link">Concept</a></li>
+                    <li class="footer__nav__item"><a href="#menu" class="footer__nav__link">Menu</a></li>
+                    <li class="footer__nav__item"><a href="#staff" class="footer__nav__link">Staff</a></li>
+                    <li class="footer__nav__item"><a href="#news" class="footer__nav__link">News</a></li>
+                    <li class="footer__nav__item"><a href="#access" class="footer__nav__link">Access</a></li>
+                </ul>
+            </div>
+            <small class="footer__copy">© SALON LUMINA</small>
+        </div>
+    </footer>
+
+    <div class="modal" data-modal aria-hidden="true">
+        <div class="modal__overlay" data-modal-close></div>
+
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal__close" type="button" data-modal-close aria-label="閉じる">×</button>
+
+            <div class="modal__body">
+                <img class="modal__img" id="modalImg" src="" alt="" />
+
+                <div class="modal__content">
+                    <h3 class="modal__title" id="modalTitle"></h3>
+                    <p class="modal__meta" id="modalPosition"></p>
+                    <p class="modal__skill" id="modalSkill"></p>
+                    <p class="modal__text" id="modalDesc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>==
+
+</html>

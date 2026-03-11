@@ -1,0 +1,28 @@
+.footer {
+    padding-block: 50px;
+    background: $c-dark;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 18px;
+
+        & a {
+            color: $c-bg;
+            font-weight: 400;
+        }
+
+        &__list {
+            display: flex;
+            gap: 18px;
+        }
+    }
+
+
+    & small {
+        font-size: 12px;
+        color: $c-bg;
+    }
+}

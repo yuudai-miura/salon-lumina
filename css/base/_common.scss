@@ -1,0 +1,234 @@
+$c-bg: #fff;
+$c-text: #222;
+$c-sub: #777;
+$c-accent: #c9a66b;
+$c-muted: #f7f7f7;
+$c-dark: #222;
+$c-border: rgba(34, 34, 34, .08);
+$c-bg-modal: rgba(0, 0, 0, .6);
+
+$radius-sm: 12px;
+$radius-md: 22px;
+$shadow-sm: 0 10px 30px rgba(0, 0, 0, .08);
+
+$container: 1100px;
+
+$font-size-xl: clamp(32px, 7vw, 40px);
+$font-size-lg: clamp(26px, 6vw, 32px);
+$font-size-md: clamp(20px, 4vw, 24px);
+$font-size-base18: 18px;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 80px;
+
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// font-size
+h1 {
+    font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-weight: 700;
+    font-size: $font-size-xl;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    color: $c-muted;
+}
+
+h2 {
+    font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-weight: 700;
+    font-size: $font-size-lg;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    color: $c-text;
+
+}
+
+h3 {
+    font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-weight: 700;
+    font-size: $font-size-md;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    color: $c-text;
+
+}
+
+ul,
+li,
+a,
+summary {
+    font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-weight: 700;
+    font-size: $font-size-base;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    color: $c-text;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+small {
+    font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-weight: 700;
+    font-size: $font-size-sm;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    color: $c-text;
+
+}
+
+.logo,
+.label {
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.08em;
+}
+
+// layout
+.l-container {
+    width: min($container, calc(100% - 48px));
+    margin-inline: auto;
+
+    @include viewport-768 {
+        width: min($container, calc(100% - 32px));
+    }
+}
+
+
+// button
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding-inline: 18px;
+    border-radius: $radius-md;
+    text-decoration: none;
+    transition: .2s ease;
+
+}
+
+.btn-primary {
+    background: $c-accent;
+    color: $c-muted;
+
+    &:hover {
+        filter: brightness(0.95);
+    }
+}
+
+.btn-ghost {
+    background: transparent;
+    color: $c-text;
+    border: 1px solid $c-border;
+}
+
+.btn-invert {
+    background: $c-bg;
+    color: $c-dark;
+
+    &:hover {
+        filter: brightness(0.95);
+    }
+
+}
+
+.btn-invert-ghost {
+    background: transparent;
+    color: $c-bg;
+    border: 1px solid $c-bg;
+}
+
+// 
+.card {
+    display: grid;
+    gap: 18px;
+}
+
+.cards--3 {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.cards--4 {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+// 基本
+.section {
+    padding-block: 100px;
+}
+
+.section__header {
+    margin-bottom: 28px;
+}
+
+.section__label {
+    color: $c-accent;
+}
+
+.section__desc {
+    color: $c-sub;
+}
+
+.section__footer {
+    margin-top: 18px;
+}
+
+.section--row {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.section--primary {
+    background: $c-accent;
+}
+
+.section--bg {
+    background: $c-bg;
+}
+
+.section--muted {
+    background: $c-muted;
+}
+
+@include viewport-768 {
+    .section {
+        padding-block: 80px;
+    }
+}
+
+
+// スクロールフェードアップ
+.reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity .55s ease, transform .55s ease;
+    will-change: opacity, transform;
+}
+
+.reveal.is-inview {
+    opacity: 1;
+    transform: translateY(0);
+}
